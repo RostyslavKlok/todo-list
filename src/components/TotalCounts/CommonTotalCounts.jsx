@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React from "react";
 
 import {
   CommonCountWrapper,
@@ -17,7 +17,7 @@ export const CommonTotalCounts = ({ width, number, text }) => {
     return CommonCountWrapper;
   };
 
-  const CurrentWrapper = useCallback(handlerCountWrapper(width), [width]);
+  const CurrentWrapper = handlerCountWrapper(width);
   return (
     <CurrentWrapper>
       <NumberWrapper>{number}</NumberWrapper>
